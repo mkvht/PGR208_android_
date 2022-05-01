@@ -11,6 +11,7 @@ import androidx.navigation.fragment.navArgs
 import androidx.recyclerview.widget.GridLayoutManager
 import com.example.pgr208_android_eksamen.MainActivity
 import com.example.pgr208_android_eksamen.R
+import com.example.pgr208_android_eksamen.databinding.FragmentViewSavedResultBinding
 import com.example.pgr208_android_eksamen.adapters.ImageAdapter
 import com.example.pgr208_android_eksamen.models.ImageApiResponse
 import com.example.pgr208_android_eksamen.models.ImageModel

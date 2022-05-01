@@ -11,12 +11,14 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.navArgs
 import androidx.recyclerview.widget.GridLayoutManager
 import com.example.pgr208_android_eksamen.MainActivity
+import com.example.pgr208_android_eksamen.R
 import com.example.pgr208_android_eksamen.adapters.ImageAdapter
 import com.example.pgr208_android_eksamen.controllers.ApiController
 import com.example.pgr208_android_eksamen.models.ImageApiResponse
 import com.example.pgr208_android_eksamen.models.ImageModel
 import com.example.pgr208_android_eksamen.models.ResultModel
 import com.example.pgr208_android_eksamen.utilities.BitmapUtility
+import com.example.pgr208_android_eksamen.databinding.FragmentReverseImageSearchBinding
 
 class RISFragment : Fragment(R.layout.fragment_reverse_image_search) {
 

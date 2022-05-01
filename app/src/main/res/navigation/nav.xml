@@ -9,7 +9,7 @@
         android:label="Home" >
         <action
             android:id="@+id/action_imagePreviewFragment_to_savedResultsFragment"
-            app:destination="@id/savedResultsFragment" />
+            app:destination="@id/listResultsFragment"/>
         <action
             android:id="@+id/action_imagePreviewFragment_to_uploadFragment"
             app:destination="@id/uploadFragment" />
@@ -34,13 +34,13 @@
             app:destination="@id/uploadFragment" />
     </fragment>
     <fragment
-        android:id="@+id/savedResultsFragment"
+        android:id="@+id/listResultsFragment"
         android:name="com.example.pgr208_android_eksamen.fragments.ListFragment"
-        android:label="SavedResultsFragment" >
+        android:label="ListResultsFragment" >
         <action
             android:id="@+id/action_savedResultsFragment_to_savedResultsPreviewFragment"
             app:destination="@id/savedResultsPreviewFragment"
-            app:popUpTo="@id/savedResultsFragment" />
+            app:popUpTo="@id/listResultsFragment" />
         <action
             android:id="@+id/action_savedResultsFragment_to_imagePreviewFragment"
             app:destination="@id/imagePreviewFragment" />
@@ -51,7 +51,7 @@
         android:label="SavedResultsPreviewFragment" >
         <action
             android:id="@+id/action_savedResultsPreviewFragment_to_savedResultsFragment"
-            app:destination="@id/savedResultsFragment" />
+            app:destination="@id/listResultsFragment" />
         <argument
             android:name="savedImage"
             app:argType="com.example.pgr208_android_eksamen.model.ImageModel"/>

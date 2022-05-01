@@ -9,6 +9,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.pgr208_android_eksamen.MainActivity
 import com.example.pgr208_android_eksamen.R
 import com.example.pgr208_android_eksamen.adapters.ListAdapter
+import com.example.pgr208_android_eksamen.databinding.FragmentListSavedResultsBinding
 
 class ListFragment: Fragment(R.layout.fragment_list_results) {
 

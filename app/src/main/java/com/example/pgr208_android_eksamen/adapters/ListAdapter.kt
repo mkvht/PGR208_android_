@@ -14,12 +14,13 @@ import com.example.pgr208_android_eksamen.fragments.ListFragmentDirections
 import com.example.pgr208_android_eksamen.models.ImageModel
 
 class ListAdapter(private val savedImages: List<ImageModel>): RecyclerView.Adapter<ListAdapter.ViewHolder>() {
-    class ViewHolder(val view: View): RecyclerView.ViewHolder(view){
+    class ViewHolder(val view: View) : RecyclerView.ViewHolder(view) {
         val imageView: ImageView = view.findViewById(R.id.resultItemThumbnail)
     }
 
     override fun onCreateViewHolder(viewGroup: ViewGroup, viewType: Int): ViewHolder {
-        val view = LayoutInflater.from(viewGroup.context).inflate(R.layout.result_item, viewGroup, false)
+        val view =
+            LayoutInflater.from(viewGroup.context).inflate(R.layout.result_item, viewGroup, false)
         return ViewHolder(view)
     }
 
@@ -28,7 +29,8 @@ class ListAdapter(private val savedImages: List<ImageModel>): RecyclerView.Adapt
         val bitmap = BitmapFactory.decodeByteArray(byteArray, 0, byteArray.size)
         viewHolder.imageView.setImageBitmap(bitmap)
         viewHolder.view.setOnClickListener {
-            val dothis = ListFragmentDirections.actionSavedResultsFragmentToSavedResultsPreviewFragment(savedImages[position])
+            val dothis =
+                ListFragmentDirections.actionSavedResultsFragmentToSavedResultsPreviewFragment(savedImages[position])
             viewHolder.view.findFragment<ListFragment>().findNavController().navigate(dothis)
         }
     }
@@ -36,3 +38,4 @@ class ListAdapter(private val savedImages: List<ImageModel>): RecyclerView.Adapt
     override fun getItemCount(): Int {
         return savedImages.size
     }
+}

@@ -27,6 +27,8 @@ import com.example.pgr208_android_eksamen.R
 import com.example.pgr208_android_eksamen.databinding.FragmentHomeBinding
 import com.example.pgr208_android_eksamen.utilities.BitmapUtility
 import com.example.pgr208_android_eksamen.utilities.BitmapUtility.uriToBitmap
+import com.theartofdev.edmodo.cropper.CropImage
+import com.theartofdev.edmodo.cropper.CropImageView
 
 class HomeFragment : Fragment(R.layout.fragment_home) {
 

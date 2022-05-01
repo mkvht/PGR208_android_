@@ -6,7 +6,7 @@
 
         />
     <item
-        android:id="@+id/savedResultsFragment"
+        android:id="@+id/listResultsFragment"
         android:title="Saved results"
         />
 
