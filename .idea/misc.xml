@@ -3,8 +3,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Biba/AndroidStudioProjects/PGR208_android_eksamen/app/src/main/res/drawable/test.xml" value="0.3995" />
         <entry key="..\:/Users/Biba/AndroidStudioProjects/PGR208_android_eksamen/app/src/main/res/layout/gallery_item.xml" value="0.5541666666666667" />
         <entry key="..\:/Users/Biba/AndroidStudioProjects/PGR208_android_eksamen/app/src/main/res/layout/result_item.xml" value="0.5541666666666667" />
+        <entry key="..\:/Users/Biba/AndroidStudioProjects/PGR208_android_eksamen/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.3995" />
+        <entry key="..\:/Users/Biba/AndroidStudioProjects/PGR208_android_eksamen/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.3995" />
         <entry key="..\:/Users/mkvht/AndroidStudioProjects/PGR208_android_eksamen/app/src/main/res/drawable/buttons.xml" value="0.14" />
         <entry key="..\:/Users/mkvht/AndroidStudioProjects/PGR208_android_eksamen/app/src/main/res/drawable/ic_baseline_search.xml" value="0.14" />
         <entry key="..\:/Users/mkvht/AndroidStudioProjects/PGR208_android_eksamen/app/src/main/res/drawable/ic_baseline_select.xml" value="0.14" />
