@@ -5,6 +5,8 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.pgr208_android_eksamen.R
+import com.example.pgr208_android_eksamen.models.ImageApiResponse
 import com.squareup.picasso.Picasso
 
 class ImageAdapter(
@@ -15,7 +17,7 @@ class ImageAdapter(
         val imageView: ImageView = view.findViewById(R.id.galleryImg)
     }
     override fun onCreateViewHolder(viewGroup: ViewGroup, viewType: Int): ViewHolder {
-        val view = LayoutInflater.from(viewGroup.context).inflate(R.layout.image_gallery_item, viewGroup, false)
+        val view = LayoutInflater.from(viewGroup.context).inflate(R.layout.gallery_item, viewGroup, false)
         return ViewHolder(view)
     }
 

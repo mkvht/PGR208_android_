@@ -9,14 +9,17 @@ import androidx.fragment.app.ListFragment
 import androidx.fragment.app.findFragment
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.RecyclerView
+import com.example.pgr208_android_eksamen.R
+import com.example.pgr208_android_eksamen.fragments.ListFragmentDirections
+import com.example.pgr208_android_eksamen.models.ImageModel
 
-class ListAdapter(private val savedImages: List<SavedImageModel>): RecyclerView.Adapter<ListAdapter.ViewHolder>() {
+class ListAdapter(private val savedImages: List<ImageModel>): RecyclerView.Adapter<ListAdapter.ViewHolder>() {
     class ViewHolder(val view: View): RecyclerView.ViewHolder(view){
         val imageView: ImageView = view.findViewById(R.id.resultItemThumbnail)
     }
 
     override fun onCreateViewHolder(viewGroup: ViewGroup, viewType: Int): ViewHolder {
-        val view = LayoutInflater.from(viewGroup.context).inflate(R.layout.saved_results_item, viewGroup, false)
+        val view = LayoutInflater.from(viewGroup.context).inflate(R.layout.result_item, viewGroup, false)
         return ViewHolder(view)
     }
 

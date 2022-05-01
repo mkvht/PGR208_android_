@@ -17,7 +17,7 @@ import com.example.pgr208_android_eksamen.models.ImageModel
 
 
 class SavedResultFragment() :
-    Fragment(R.layout.fragment_view_result) {
+    Fragment(R.layout.fragment_view_results) {
     private lateinit var binding: FragmentViewSavedResultBinding
     private val args: ViewSavedResultFragmentArgs by navArgs()
     override fun onCreateView(

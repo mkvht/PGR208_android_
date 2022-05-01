@@ -19,8 +19,14 @@ import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
+import androidx.core.net.toUri
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
+import com.example.pgr208_android_eksamen.MainActivity
+import com.example.pgr208_android_eksamen.R
+import com.example.pgr208_android_eksamen.databinding.FragmentHomeBinding
+import com.example.pgr208_android_eksamen.utilities.BitmapUtility
+import com.example.pgr208_android_eksamen.utilities.BitmapUtility.uriToBitmap
 
 class HomeFragment : Fragment(R.layout.fragment_home) {
 
@@ -120,11 +126,11 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
             if (resultCode == Activity.RESULT_OK) {
                 val uri: Uri? = result.uri
                 val bitmap =
-                    BitmapUtils.getBitmap(
+                    BitmapUtility.getBitmap(
                         it, null, uri.toString(), ::uriToBitmap
                     )
                 val filename = uri?.lastPathSegment?.substringBefore('.')
-                val file = BitmapUtils.bitmapToFile(bitmap, "$filename.png", it)
+                val file = BitmapUtility.bitmapToFile(bitmap, "$filename.png", it)
                 Log.d("Image Crop", "file: $file")
                 Log.d("ImageCrop", "Extension of file is ${file.extension}")
 
