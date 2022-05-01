@@ -27,7 +27,7 @@ class RISFragment : Fragment(R.layout.fragment_reverse_image_search) {
     private var bingResponse = listOf<ImageApiResponse>()
     private var tineyeResponse = listOf<ImageApiResponse>()
     private var googleResponse = listOf<ImageApiResponse>()
-    private val args by navArgs<ReverseImageSearchFragmentArgs>()
+    private val args by navArgs<RISFragmentArgs>()
 
     override fun onCreateView(
         inflater: LayoutInflater,

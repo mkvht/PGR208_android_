@@ -9,18 +9,20 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.pgr208_android_eksamen.MainActivity
 import com.example.pgr208_android_eksamen.R
 import com.example.pgr208_android_eksamen.adapters.ListAdapter
-import com.example.pgr208_android_eksamen.databinding.FragmentListSavedResultsBinding
+import com.example.pgr208_android_eksamen.databinding.FragmentListResultsBinding
 
 class ListFragment: Fragment(R.layout.fragment_list_results) {
 
-    private lateinit var binding: FragmentListSavedResultsBinding
+    //private lateinit var binding: FragmentListSavedResultsBinding
+    private lateinit var binding: FragmentListResultsBinding
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        binding = FragmentListSavedResultsBinding.inflate(inflater, container, false)
+        binding = FragmentListResultsBinding.inflate(inflater, container, false)
+        //binding = FragmentListSavedResultsBinding.inflate(inflater, container, false)
         val view = binding.root
 
         val database = (activity as MainActivity).database

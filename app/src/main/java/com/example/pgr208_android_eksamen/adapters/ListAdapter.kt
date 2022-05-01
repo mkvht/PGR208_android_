@@ -24,14 +24,13 @@ class ListAdapter(private val savedImages: List<ImageModel>): RecyclerView.Adapt
         return ViewHolder(view)
     }
 
-    override fun onBindViewHolder(viewHolder: ViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val byteArray = savedImages[position].image
         val bitmap = BitmapFactory.decodeByteArray(byteArray, 0, byteArray.size)
-        viewHolder.imageView.setImageBitmap(bitmap)
-        viewHolder.view.setOnClickListener {
-            val dothis =
-                ListFragmentDirections.actionSavedResultsFragmentToSavedResultsPreviewFragment(savedImages[position])
-            viewHolder.view.findFragment<ListFragment>().findNavController().navigate(dothis)
+        holder.imageView.setImageBitmap(bitmap)
+        holder.view.setOnClickListener {
+            val action = ListFragmentDirections.actionSavedResultsFragmentToSavedResultsPreviewFragment(savedImages[position])
+            holder.view.findFragment<ListFragment>().findNavController().navigate(action)
         }
     }
 

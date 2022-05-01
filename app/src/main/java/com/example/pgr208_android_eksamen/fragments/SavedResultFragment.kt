@@ -11,24 +11,28 @@ import androidx.navigation.fragment.navArgs
 import androidx.recyclerview.widget.GridLayoutManager
 import com.example.pgr208_android_eksamen.MainActivity
 import com.example.pgr208_android_eksamen.R
-import com.example.pgr208_android_eksamen.databinding.FragmentViewSavedResultBinding
+
 import com.example.pgr208_android_eksamen.adapters.ImageAdapter
+import com.example.pgr208_android_eksamen.databinding.FragmentViewResultsBinding
 import com.example.pgr208_android_eksamen.models.ImageApiResponse
 import com.example.pgr208_android_eksamen.models.ImageModel
 
 
 class SavedResultFragment() :
     Fragment(R.layout.fragment_view_results) {
-    private lateinit var binding: FragmentViewSavedResultBinding
-    private val args: ViewSavedResultFragmentArgs by navArgs()
+//    private lateinit var binding: FragmentViewSavedResultBinding
+    private lateinit var binding: FragmentViewResultsBinding
+
+    private val args: SavedResultFragmentArgs by navArgs()
+//    private val args: ViewSavedResultFragmentArgs by navArgs()
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        val savedImage: ImageModel = args.savedImage
+        val savedImage: ImageModel = args.savedImages
         val database = (activity as MainActivity).database
-        binding = FragmentViewSavedResultBinding.inflate(inflater, container, false)
+        binding = FragmentViewResultsBinding.inflate(inflater, container, false)
         val byteArray = savedImage.image
         val bitmap = BitmapFactory.decodeByteArray(byteArray, 0, byteArray.size)
         binding.savedImage.setImageBitmap(bitmap)
@@ -42,7 +46,7 @@ class SavedResultFragment() :
         galleryRv.adapter = mappedResults?.let { ImageAdapter(it) }
 
         binding.deleteImageBtn.setOnClickListener {
-            val action = ViewSavedResultFragmentDirections.actionSavedResultsPreviewFragmentToSavedResultsFragment()
+            val action = SavedResultFragmentDirections.actionSavedResultFragmentToListFragment()
             (activity as MainActivity).database.deleteImage(savedImage)
             requireView().findNavController().navigate(action)
         }
