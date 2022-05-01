@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/imagePreviewFragment">
+    <fragment
+        android:id="@+id/imagePreviewFragment"
+        android:name="com.example.pgr208_android_eksamen.fragments.HomeFragment"
+        android:label="Home" >
+        <action
+            android:id="@+id/action_imagePreviewFragment_to_savedResultsFragment"
+            app:destination="@id/savedResultsFragment" />
+        <action
+            android:id="@+id/action_imagePreviewFragment_to_uploadFragment"
+            app:destination="@id/uploadFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/uploadFragment"
+        android:name="com.example.pgr208_android_eksamen.fragments.RISFragment"
+        android:label="Upload" >
+        <action
+            android:id="@+id/action_uploadFragment_to_imagePreviewFragment"
+            app:destination="@id/imagePreviewFragment" />
+        <argument
+            android:name="currentURI"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/loadingFragment"
+        android:name="com.example.pgr208_android_eksamen.fragments.LoadFragment"
+        android:label="LoadingFragment" >
+        <action
+            android:id="@+id/action_loadingFragment_to_uploadFragment"
+            app:destination="@id/uploadFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/savedResultsFragment"
+        android:name="com.example.pgr208_android_eksamen.fragments.ListFragment"
+        android:label="SavedResultsFragment" >
+        <action
+            android:id="@+id/action_savedResultsFragment_to_savedResultsPreviewFragment"
+            app:destination="@id/savedResultsPreviewFragment"
+            app:popUpTo="@id/savedResultsFragment" />
+        <action
+            android:id="@+id/action_savedResultsFragment_to_imagePreviewFragment"
+            app:destination="@id/imagePreviewFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/savedResultsPreviewFragment"
+        android:name="com.example.pgr208_android_eksamen.fragments.SavedResultFragment"
+        android:label="SavedResultsPreviewFragment" >
+        <action
+            android:id="@+id/action_savedResultsPreviewFragment_to_savedResultsFragment"
+            app:destination="@id/savedResultsFragment" />
+        <argument
+            android:name="savedImage"
+            app:argType="com.example.pgr208_android_eksamen.model.ImageModel"/>
+    </fragment>
+</navigation>

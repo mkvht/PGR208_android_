@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:paddingBottom="5dp"
+    android:layout_height="300dp"
+    android:layout_gravity="center">
+
+    <ImageView
+        android:id="@+id/resultItemThumbnail"
+        android:layout_width="280dp"
+        android:layout_height="280dp"
+        android:elevation="6dp"
+        android:background="@drawable/shadow_rect"
+        android:layout_gravity="center"
+        android:scaleType="centerInside"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/saved_image_description"
+        android:padding="10dp"
+        />
+
+</FrameLayout>
