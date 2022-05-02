@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.Toast
 import androidx.core.net.toFile
 import androidx.fragment.app.Fragment
@@ -71,6 +72,7 @@ class RISFragment : Fragment(R.layout.fragment_reverse_image_search) {
                 database.insertImageResult(ResultModel(url = it.imageLink, searchId = imageId))
             }
         }
+        view.findViewById<ImageView>(R.id.upload_image).setBackgroundResource(R.drawable.shadow_rect)
         return view
     }
 

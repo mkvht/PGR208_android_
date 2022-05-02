@@ -12,6 +12,7 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.Toast
 import androidx.activity.result.ActivityResultLauncher
 import androidx.activity.result.contract.ActivityResultContracts
@@ -46,6 +47,7 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
+
         binding = FragmentHomeBinding.inflate(inflater, container, false)
         val view = binding.root
 
@@ -59,14 +61,13 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
 
         binding.searchBtn.setOnClickListener{
             imageUri?.let {
-                Toast.makeText(this.context, "Uploading image to server, please wait...", Toast.LENGTH_LONG).show()
+                Toast.makeText(this.context, "Searching image, please wait...", Toast.LENGTH_LONG).show()
                 val action = HomeFragmentDirections.actionImagePreviewFragmentToUploadFragment(imageUri.toString())
                 findNavController().navigate(action)
             }?: run{
-                Toast.makeText(this.context, "You must select an image to upload first!", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this.context, "You must upload or use the camera to get an image to search for first!", Toast.LENGTH_SHORT).show()
             }
         }
-
         return view
     }
 
@@ -120,7 +121,7 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
         this.context?.let {
             AlertDialog.Builder(it)
                 .setTitle("PERMISSION DENIED")
-                .setMessage("Permission is denied. Please allow permissions from App Settings")
+                .setMessage("A required permission is denied... Please choose to allow permissions from the App Settings")
                 .setPositiveButton(
                     "App Settings"
                 ) { _, _ ->
@@ -200,5 +201,6 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
 
     private fun setImage(uri: Uri){
         binding.imageView.setImageURI(uri)
+        binding.imageView.setBackgroundResource(R.drawable.shadow_rect)
     }
 }

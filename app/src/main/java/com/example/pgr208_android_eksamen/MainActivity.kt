@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
 import android.widget.Toolbar
+import androidx.activity.compose.setContent
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.NavigationUI
@@ -28,6 +29,7 @@ class MainActivity : AppCompatActivity() {
         val navController = findNavController(R.id.nav_host_fragment)
         val appBarConfiguration = AppBarConfiguration(navController.graph)
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration)
+
         val bottomNav = binding.bottomNavView
         bottomNav.setupWithNavController(navController)
     }
