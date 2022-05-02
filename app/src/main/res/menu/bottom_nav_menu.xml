@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
-        android:id="@+id/imagePreviewFragment"
+        android:id="@+id/homeFragment"
         android:title="Select and upload"
-
         />
     <item
-        android:id="@+id/listResultsFragment"
+        android:id="@+id/albumFragment"
         android:title="Saved results"
         />
 

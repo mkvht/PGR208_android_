@@ -44,18 +44,19 @@ class RISFragment : Fragment(R.layout.fragment_reverse_image_search) {
         uploadImage()
 
         binding.uploadPreviewIv.setImageURI(imageUri)
-        binding.btnGoogle.setOnClickListener {
-            //Show google results
-            rv.adapter = ImageAdapter(googleResponse)
-        }
 
-        binding.btnBing.setOnClickListener {
+        binding.bingBtn.setOnClickListener {
             //Show bing results
             rv.adapter = ImageAdapter(bingResponse)
 
         }
 
-        binding.btnTineye.setOnClickListener {
+        binding.googleBtn.setOnClickListener {
+            //Show google results
+            rv.adapter = ImageAdapter(googleResponse)
+        }
+
+        binding.tineyeBtn.setOnClickListener {
             //Show tineye results
             rv.adapter = ImageAdapter(tineyeResponse)
 

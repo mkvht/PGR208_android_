@@ -1,41 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--https://medium.com/@shanmugasanthosh/android-navigation-architecture-component-part-1-3c6458e9bff3-->
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/nav"
-    app:startDestination="@id/imagePreviewFragment">
+    app:startDestination="@id/homeFragment"
+
+    >
     <fragment
-        android:id="@+id/savedResultsPreviewFragment"
+        android:id="@+id/specificImageFragment"
         android:name="com.example.pgr208_android_eksamen.fragments.SavedResultFragment"
-        android:label="SavedResultsPreviewFragment">
+        android:label="">
         <action
             android:id="@+id/action_savedResultFragment_to_listFragment"
-            app:destination="@id/savedResultsFragment" />
+            app:destination="@id/albumFragment" />
         <argument
             android:name="savedImages"
             app:argType="com.example.pgr208_android_eksamen.models.ImageModel" />
     </fragment>
     <fragment
-        android:id="@+id/savedResultsFragment"
+        android:id="@+id/albumFragment"
         android:name="com.example.pgr208_android_eksamen.fragments.ListFragment"
-        android:label="SavedResultsFragment" >
+        android:label="" >
         <action
             android:id="@+id/action_savedResultsFragment_to_savedResultsPreviewFragment"
-            app:destination="@id/savedResultsPreviewFragment"
-            app:popUpTo="@id/savedResultsFragment" />
+            app:destination="@id/specificImageFragment"
+            app:popUpTo="@id/albumFragment" />
         <action
             android:id="@+id/action_savedResultsFragment_to_imagePreviewFragment"
-            app:destination="@id/imagePreviewFragment" />
+            app:destination="@id/homeFragment" />
     </fragment>
     <fragment
-        android:id="@+id/imagePreviewFragment"
+
+        android:id="@+id/homeFragment"
         android:name="com.example.pgr208_android_eksamen.fragments.HomeFragment"
-        android:label="Home">
+        android:label="@string/app_name">
         <action
             android:id="@+id/action_imagePreviewFragment_to_uploadFragment"
             app:destination="@id/uploadFragment" />
         <action
             android:id="@+id/action_imagePreviewFragment_to_savedResultsFragment"
-            app:destination="@id/savedResultsFragment" />
+            app:destination="@id/albumFragment" />
     </fragment>
     <fragment
         android:id="@+id/uploadFragment"
@@ -46,6 +50,6 @@
             app:argType="string" />
         <action
             android:id="@+id/action_uploadFragment_to_imagePreviewFragment"
-            app:destination="@id/imagePreviewFragment" />
+            app:destination="@id/homeFragment" />
     </fragment>
 </navigation>

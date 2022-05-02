@@ -1,9 +1,8 @@
 <resources>
-    <string name="app_name">Android Exam</string>
+    <string name="app_name">Picture Nest</string>
     <string name="reverse_image_search_results">Reverse Image</string>
-    <string name="select_upload_show_image">Select / Upload</string>
-    <string name="my_image_desc">my image description</string>
+    <string name="upload_img">Upload</string>
+    <string name="img_description">my image description</string>
     <string name="saved_results">Saved results</string>
-    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="saved_image_description">A saved image</string>
 </resources>

@@ -18,8 +18,19 @@
             android:layout_height="match_parent"
             android:layout_weight="0.5"/>
 
+
         <Button
-            android:id="@+id/btnGoogle"
+            android:id="@+id/bingBtn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/button_margin"
+            android:layout_weight="@dimen/standard_weight"
+            android:text="Bing"
+            android:textAlignment="center"
+            android:textSize="@dimen/small_font" />
+
+        <Button
+            android:id="@+id/googleBtn"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/button_margin"
@@ -29,18 +40,7 @@
             android:textSize="@dimen/small_font" />
 
         <Button
-            android:id="@+id/btnBing"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/button_margin"
-            android:layout_weight="@dimen/standard_weight"
-            android:text="Bing"
-            android:textAlignment="center"
-            android:textSize="@dimen/small_font" />
-
-
-        <Button
-            android:id="@+id/btnTineye"
+            android:id="@+id/tineyeBtn"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/button_margin"
