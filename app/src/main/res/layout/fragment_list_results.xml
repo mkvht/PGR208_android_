@@ -12,35 +12,35 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
+
         <TextView
             android:id="@+id/album_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textAlignment="center"
             android:layout_centerHorizontal="true"
-            android:textSize="@dimen/medium_font"
-            android:text="Album"
-            android:textColor="@color/primary"
             android:paddingTop="20dp"
             android:paddingBottom="20dp"
-            />
+            android:text="Album"
+            android:textAlignment="center"
+            android:textColor="@color/primary"
+            android:textSize="@dimen/medium_font" />
+
         <View
 
             android:layout_width="match_parent"
             android:layout_height="3dp"
-            android:background="@color/primary"
             android:layout_centerVertical="true"
             android:layout_marginLeft="20dp"
             android:layout_toRightOf="@id/album_text"
-            />
+            android:background="@color/primary" />
+
         <View
             android:layout_width="match_parent"
             android:layout_height="3dp"
-            android:background="@color/primary"
             android:layout_centerVertical="true"
             android:layout_marginRight="20dp"
             android:layout_toLeftOf="@id/album_text"
-            />
+            android:background="@color/primary" />
     </RelativeLayout>
 
     <androidx.recyclerview.widget.RecyclerView

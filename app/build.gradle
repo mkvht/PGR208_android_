@@ -4,7 +4,7 @@ plugins {
     id 'kotlin-android-extensions'
     id 'androidx.navigation.safeargs'
 }
-apply plugin: 'kotlin-android'
+
 
 android {
     compileSdk 31
@@ -74,6 +74,5 @@ dependencies {
 
     //Material library
     implementation 'com.google.android.material:material:1.5.0'
-    implementation "androidx.core:core-ktx:+"
-    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+
 }

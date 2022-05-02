@@ -2,17 +2,17 @@
   <library name="Gradle: androidx.dynamicanimation:dynamicanimation:1.0.0@aar">
     <CLASSES>
       <root url="file://$USER_HOME$/.gradle/caches/transforms-3/dc67f07654858a3324e5cacb71757f1b/transformed/dynamicanimation-1.0.0/res" />
-      <root url="jar://$USER_HOME$/Pictures/Android/caches/transforms-3/dc67f07654858a3324e5cacb71757f1b/transformed/dynamicanimation-1.0.0/jars/classes.jar!/" />
       <root url="file://$USER_HOME$/Pictures/Android/caches/transforms-3/dc67f07654858a3324e5cacb71757f1b/transformed/dynamicanimation-1.0.0/res" />
-      <root url="file://$USER_HOME$/Pictures/Android/caches/transforms-3/dc67f07654858a3324e5cacb71757f1b/transformed/dynamicanimation-1.0.0/AndroidManifest.xml" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-3/1e0881f762462f5c0608603bf06fa99d/transformed/dynamicanimation-1.0.0/AndroidManifest.xml" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-3/1e0881f762462f5c0608603bf06fa99d/transformed/dynamicanimation-1.0.0/res" />
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/1e0881f762462f5c0608603bf06fa99d/transformed/dynamicanimation-1.0.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/Pictures/Android/caches/transforms-3/1e0881f762462f5c0608603bf06fa99d/transformed/dynamicanimation-1.0.0/res" />
+      <root url="jar://$USER_HOME$/Pictures/Android/caches/transforms-3/dc67f07654858a3324e5cacb71757f1b/transformed/dynamicanimation-1.0.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/Pictures/Android/caches/transforms-3/dc67f07654858a3324e5cacb71757f1b/transformed/dynamicanimation-1.0.0/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
       <root url="jar://$USER_HOME$/Pictures/Android/caches/modules-2/files-2.1/androidx.dynamicanimation/dynamicanimation/1.0.0/5c050e29af5033ff5e2d58ccf657ae92fdfbda4a/dynamicanimation-1.0.0-sources.jar!/" />
-      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/androidx.dynamicanimation/dynamicanimation/1.0.0/5c050e29af5033ff5e2d58ccf657ae92fdfbda4a/dynamicanimation-1.0.0-sources.jar!/" />
     </SOURCES>
   </library>
 </component>

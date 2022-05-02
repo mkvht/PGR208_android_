@@ -32,6 +32,13 @@ import com.theartofdev.edmodo.cropper.CropImageView
 
 class HomeFragment : Fragment(R.layout.fragment_home) {
 
+    companion object {
+        private const val  CAMERA_PERMISSION_CODE = 1
+        private const val CAMERA_REQUEST_CODE = 2
+
+
+    }
+
     private lateinit var binding: FragmentHomeBinding
     private var imageUri : Uri? = null
     override fun onCreateView(
@@ -42,11 +49,15 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
         binding = FragmentHomeBinding.inflate(inflater, container, false)
         val view = binding.root
 
-        binding.btnSelect.setOnClickListener{
+        binding.uploadBtn.setOnClickListener{
             selectImageAndUpload()
         }
 
-        binding.btnUpload.setOnClickListener{
+        binding.cameraBtn.setOnClickListener{
+            selectCameraAndUpload()
+        }
+
+        binding.searchBtn.setOnClickListener{
             imageUri?.let {
                 Toast.makeText(this.context, "Uploading image to server, please wait...", Toast.LENGTH_LONG).show()
                 val action = HomeFragmentDirections.actionImagePreviewFragmentToUploadFragment(imageUri.toString())
@@ -57,18 +68,6 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
         }
 
         return view
-    }
-
-    //Methods for opening gallery and cropping image
-
-    private val requestPermissionLauncher = registerForActivityResult(ActivityResultContracts.RequestPermission()){
-            isGranted: Boolean ->
-        if (isGranted){
-            //No action required, we have permission
-        } else {
-            showPermissionDeniedDialog()
-            //Explain why we need the permission to the user
-        }
     }
 
     private fun selectImageAndUpload() {
@@ -84,6 +83,37 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
             }
         }
     }
+
+    private fun selectCameraAndUpload() {
+
+        when { ContextCompat.checkSelfPermission(activity as MainActivity,
+            Manifest.permission.CAMERA) == PackageManager.PERMISSION_GRANTED -> {
+            val intent = Intent(MediaStore.ACTION_IMAGE_CAPTURE)
+            cameraLauncher.launch(intent)
+        }
+            ActivityCompat.shouldShowRequestPermissionRationale(activity as MainActivity, Manifest.permission.CAMERA) -> {
+                showPermissionDeniedDialog()
+            }
+            else -> {
+                requestPermissionLauncher.launch(Manifest.permission.READ_EXTERNAL_STORAGE)
+            }
+        }
+
+    }
+
+    //Methods for opening gallery and cropping image
+
+    private val requestPermissionLauncher = registerForActivityResult(ActivityResultContracts.RequestPermission()){
+            isGranted: Boolean ->
+        if (isGranted){
+            //No action required, we have permission
+        } else {
+            showPermissionDeniedDialog()
+            //Explain why we need the permission to the user
+        }
+    }
+
+
 
     private fun showPermissionDeniedDialog() {
         Log.d("failed", "failed")
@@ -115,6 +145,20 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
                 }
             }
         }
+
+
+    private val cameraLauncher : ActivityResultLauncher<Intent> =
+        registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
+            if (result.resultCode == AppCompatActivity.RESULT_OK && result.data != null) {
+                imageUri = result.data?.data
+
+                imageUri?.let {uri -> launchImageCrop(uri)
+                    Log.d("CameraPicker", "URI: $imageUri")
+                }
+            }
+        }
+
+
 
     //Crop-methods
 
