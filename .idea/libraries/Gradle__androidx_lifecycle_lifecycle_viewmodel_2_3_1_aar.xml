@@ -1,16 +1,17 @@
 <component name="libraryTable">
   <library name="Gradle: androidx.lifecycle:lifecycle-viewmodel:2.3.1@aar">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/437ae27af42fd0cc84c01181d0b91a9b/transformed/lifecycle-viewmodel-2.3.1/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/437ae27af42fd0cc84c01181d0b91a9b/transformed/lifecycle-viewmodel-2.3.1/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/437ae27af42fd0cc84c01181d0b91a9b/transformed/lifecycle-viewmodel-2.3.1/AndroidManifest.xml" />
       <root url="jar://$USER_HOME$/Pictures/Android/caches/transforms-3/437ae27af42fd0cc84c01181d0b91a9b/transformed/lifecycle-viewmodel-2.3.1/jars/classes.jar!/" />
       <root url="file://$USER_HOME$/Pictures/Android/caches/transforms-3/437ae27af42fd0cc84c01181d0b91a9b/transformed/lifecycle-viewmodel-2.3.1/AndroidManifest.xml" />
       <root url="file://$USER_HOME$/Pictures/Android/caches/transforms-3/437ae27af42fd0cc84c01181d0b91a9b/transformed/lifecycle-viewmodel-2.3.1/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/86e77eb03f0a7c505a3535c969afcb35/transformed/lifecycle-viewmodel-2.3.1/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/86e77eb03f0a7c505a3535c969afcb35/transformed/lifecycle-viewmodel-2.3.1/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/86e77eb03f0a7c505a3535c969afcb35/transformed/lifecycle-viewmodel-2.3.1/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
       <root url="jar://$USER_HOME$/Pictures/Android/caches/modules-2/files-2.1/androidx.lifecycle/lifecycle-viewmodel/2.3.1/55d6fa3541ca02167b0bd62a16fbdaec2a71622/lifecycle-viewmodel-2.3.1-sources.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/androidx.lifecycle/lifecycle-viewmodel/2.3.1/55d6fa3541ca02167b0bd62a16fbdaec2a71622/lifecycle-viewmodel-2.3.1-sources.jar!/" />
     </SOURCES>
   </library>
 </component>

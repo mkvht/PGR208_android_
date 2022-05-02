@@ -1,12 +1,12 @@
 <component name="libraryTable">
   <library name="Gradle: androidx.navigation:navigation-dynamic-features-runtime:2.4.2@aar">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/fb817930e06c8b779c76eba911d78313/transformed/jetified-navigation-dynamic-features-runtime-2.4.2/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/fb817930e06c8b779c76eba911d78313/transformed/jetified-navigation-dynamic-features-runtime-2.4.2/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/fb817930e06c8b779c76eba911d78313/transformed/jetified-navigation-dynamic-features-runtime-2.4.2/AndroidManifest.xml" />
       <root url="file://$USER_HOME$/Pictures/Android/caches/transforms-3/fb817930e06c8b779c76eba911d78313/transformed/jetified-navigation-dynamic-features-runtime-2.4.2/AndroidManifest.xml" />
       <root url="jar://$USER_HOME$/Pictures/Android/caches/transforms-3/fb817930e06c8b779c76eba911d78313/transformed/jetified-navigation-dynamic-features-runtime-2.4.2/jars/classes.jar!/" />
       <root url="file://$USER_HOME$/Pictures/Android/caches/transforms-3/fb817930e06c8b779c76eba911d78313/transformed/jetified-navigation-dynamic-features-runtime-2.4.2/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/ac82b7b24d08009072c0820d2e03c204/transformed/jetified-navigation-dynamic-features-runtime-2.4.2/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/ac82b7b24d08009072c0820d2e03c204/transformed/jetified-navigation-dynamic-features-runtime-2.4.2/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/ac82b7b24d08009072c0820d2e03c204/transformed/jetified-navigation-dynamic-features-runtime-2.4.2/res" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
