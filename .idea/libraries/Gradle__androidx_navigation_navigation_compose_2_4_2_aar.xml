@@ -1,12 +1,12 @@
 <component name="libraryTable">
   <library name="Gradle: androidx.navigation:navigation-compose:2.4.2@aar">
     <CLASSES>
-      <root url="file://$USER_HOME$/Pictures/Android/caches/transforms-3/02d829f9b7f9f4a87841069a776ce93e/transformed/jetified-navigation-compose-2.4.2/res" />
-      <root url="jar://$USER_HOME$/Pictures/Android/caches/transforms-3/02d829f9b7f9f4a87841069a776ce93e/transformed/jetified-navigation-compose-2.4.2/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/Pictures/Android/caches/transforms-3/02d829f9b7f9f4a87841069a776ce93e/transformed/jetified-navigation-compose-2.4.2/AndroidManifest.xml" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-3/b44292c04bf1d6aafe4b5aca16a566d0/transformed/jetified-navigation-compose-2.4.2/AndroidManifest.xml" />
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/b44292c04bf1d6aafe4b5aca16a566d0/transformed/jetified-navigation-compose-2.4.2/jars/classes.jar!/" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-3/b44292c04bf1d6aafe4b5aca16a566d0/transformed/jetified-navigation-compose-2.4.2/res" />
+      <root url="file://$USER_HOME$/Pictures/Android/caches/transforms-3/02d829f9b7f9f4a87841069a776ce93e/transformed/jetified-navigation-compose-2.4.2/res" />
+      <root url="jar://$USER_HOME$/Pictures/Android/caches/transforms-3/02d829f9b7f9f4a87841069a776ce93e/transformed/jetified-navigation-compose-2.4.2/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/Pictures/Android/caches/transforms-3/02d829f9b7f9f4a87841069a776ce93e/transformed/jetified-navigation-compose-2.4.2/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

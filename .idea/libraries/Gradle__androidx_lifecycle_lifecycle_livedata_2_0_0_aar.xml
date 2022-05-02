@@ -2,17 +2,17 @@
   <library name="Gradle: androidx.lifecycle:lifecycle-livedata:2.0.0@aar">
     <CLASSES>
       <root url="file://$USER_HOME$/.gradle/caches/transforms-3/e36c4fa13e0d631d6cce3c57e8095363/transformed/lifecycle-livedata-2.0.0/res" />
-      <root url="jar://$USER_HOME$/Pictures/Android/caches/transforms-3/e36c4fa13e0d631d6cce3c57e8095363/transformed/lifecycle-livedata-2.0.0/jars/classes.jar!/" />
       <root url="file://$USER_HOME$/Pictures/Android/caches/transforms-3/e36c4fa13e0d631d6cce3c57e8095363/transformed/lifecycle-livedata-2.0.0/res" />
-      <root url="file://$USER_HOME$/Pictures/Android/caches/transforms-3/e36c4fa13e0d631d6cce3c57e8095363/transformed/lifecycle-livedata-2.0.0/AndroidManifest.xml" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-3/12368fa8dd04a98d4ab1edcd7b8da6be/transformed/lifecycle-livedata-2.0.0/AndroidManifest.xml" />
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/12368fa8dd04a98d4ab1edcd7b8da6be/transformed/lifecycle-livedata-2.0.0/jars/classes.jar!/" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-3/12368fa8dd04a98d4ab1edcd7b8da6be/transformed/lifecycle-livedata-2.0.0/res" />
+      <root url="file://$USER_HOME$/Pictures/Android/caches/transforms-3/12368fa8dd04a98d4ab1edcd7b8da6be/transformed/lifecycle-livedata-2.0.0/res" />
+      <root url="jar://$USER_HOME$/Pictures/Android/caches/transforms-3/e36c4fa13e0d631d6cce3c57e8095363/transformed/lifecycle-livedata-2.0.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/Pictures/Android/caches/transforms-3/e36c4fa13e0d631d6cce3c57e8095363/transformed/lifecycle-livedata-2.0.0/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
       <root url="jar://$USER_HOME$/Pictures/Android/caches/modules-2/files-2.1/androidx.lifecycle/lifecycle-livedata/2.0.0/740ce61935bd789380c01178bd8ce402402ebd2f/lifecycle-livedata-2.0.0-sources.jar!/" />
-      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/androidx.lifecycle/lifecycle-livedata/2.0.0/740ce61935bd789380c01178bd8ce402402ebd2f/lifecycle-livedata-2.0.0-sources.jar!/" />
     </SOURCES>
   </library>
 </component>
