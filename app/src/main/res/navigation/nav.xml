@@ -12,19 +12,19 @@
         android:label="">
         <action
             android:id="@+id/action_savedResultFragment_to_listFragment"
-            app:destination="@id/albumFragment" />
+            app:destination="@id/galleryFragment" />
         <argument
             android:name="savedImages"
             app:argType="com.example.pgr208_android_eksamen.models.ImageModel" />
     </fragment>
     <fragment
-        android:id="@+id/albumFragment"
+        android:id="@+id/galleryFragment"
         android:name="com.example.pgr208_android_eksamen.fragments.ListFragment"
         android:label="" >
         <action
             android:id="@+id/action_savedResultsFragment_to_savedResultsPreviewFragment"
             app:destination="@id/specificImageFragment"
-            app:popUpTo="@id/albumFragment" />
+            app:popUpTo="@id/galleryFragment" />
         <action
             android:id="@+id/action_savedResultsFragment_to_imagePreviewFragment"
             app:destination="@id/homeFragment" />
@@ -39,7 +39,7 @@
             app:destination="@id/uploadFragment" />
         <action
             android:id="@+id/action_imagePreviewFragment_to_savedResultsFragment"
-            app:destination="@id/albumFragment" />
+            app:destination="@id/galleryFragment" />
     </fragment>
     <fragment
         android:id="@+id/uploadFragment"

@@ -4,9 +4,10 @@
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
+
     <ImageView
         android:id="@+id/galleryImg"
-        android:scaleType="centerCrop"
+        android:scaleType="centerInside"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:elevation="6dp"

@@ -6,18 +6,86 @@
     android:padding="@dimen/padding"
     android:background="@color/white">
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/image_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:layout_centerHorizontal="true"
+            android:textSize="@dimen/medium_font"
+            android:text="Your saved search"
+            android:textColor="@color/primary"
+            android:paddingTop="20dp"
+            android:paddingBottom="20dp"
+            />
+        <View
+
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:background="@color/primary"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@id/image_text"
+            />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:background="@color/primary"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:layout_toLeftOf="@id/image_text"
+            />
+    </RelativeLayout>
+
     <ImageView
         android:id="@+id/saved_image"
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:layout_weight="0.6"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_weight="0.1"
         android:layout_gravity="center"
         android:layout_marginBottom="10dp"
         android:elevation="6dp"
         android:background="@drawable/shadow_rect"
-        android:padding="10dp"
+        android:padding="5dp"
+        android:scaleType="centerInside"
         >
     </ImageView>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/result_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:layout_centerHorizontal="true"
+            android:textSize="@dimen/medium_font"
+            android:text="Results"
+            android:textColor="@color/primary"
+            android:paddingTop="20dp"
+            android:paddingBottom="20dp"
+            />
+        <View
+
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:background="@color/primary"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@id/result_text"
+            />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:background="@color/primary"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:layout_toLeftOf="@id/result_text"
+            />
+    </RelativeLayout>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/imagesContainer"

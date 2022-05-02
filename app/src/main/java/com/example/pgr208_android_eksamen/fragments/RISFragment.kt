@@ -43,7 +43,7 @@ class RISFragment : Fragment(R.layout.fragment_reverse_image_search) {
 
         uploadImage()
 
-        binding.uploadPreviewIv.setImageURI(imageUri)
+        binding.uploadImage.setImageURI(imageUri)
 
         binding.bingBtn.setOnClickListener {
             //Show bing results
@@ -64,7 +64,6 @@ class RISFragment : Fragment(R.layout.fragment_reverse_image_search) {
 
         binding.btnSave.setOnClickListener {
             val database = (activity as MainActivity).database
-            //TODO - save the image in a more long-term location
             val bitmap = BitmapUtility.uriToBitmap(requireContext(), null, imageUri.toString())
             val byteArray = BitmapUtility.bitmapToByteArray(bitmap)
             val imageId = database.insertImageSearch(ImageModel(image = byteArray))

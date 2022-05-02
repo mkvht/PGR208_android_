@@ -2,11 +2,13 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:id="@+id/homeFragment"
-        android:title="Select and upload"
+        android:title="HOME"
+        android:icon="@drawable/ic_home"
         />
     <item
-        android:id="@+id/albumFragment"
-        android:title="Saved results"
+        android:id="@+id/galleryFragment"
+        android:title="GALLERY"
+        android:icon="@drawable/ic_image"
         />
 
 </menu>

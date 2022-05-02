@@ -15,7 +15,7 @@
         android:scaleType="centerInside"
         android:adjustViewBounds="true"
         android:contentDescription="@string/saved_image_description"
-        android:padding="10dp"
+        android:padding="5dp"
         />
 
 </FrameLayout>
