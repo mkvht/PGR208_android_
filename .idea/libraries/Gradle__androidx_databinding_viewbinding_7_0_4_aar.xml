@@ -7,8 +7,10 @@
       <root url="file://$USER_HOME$/.gradle/caches/transforms-3/c1a7495d2e1e49f62f9c142e4f1cdd18/transformed/jetified-viewbinding-7.0.4/AndroidManifest.xml" />
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/c1a7495d2e1e49f62f9c142e4f1cdd18/transformed/jetified-viewbinding-7.0.4/jars/classes.jar!/" />
       <root url="file://$USER_HOME$/Pictures/Android/caches/transforms-3/c1a7495d2e1e49f62f9c142e4f1cdd18/transformed/jetified-viewbinding-7.0.4/res" />
-      <root url="file://$USER_HOME$/Pictures/Android/caches/transforms-3/8f91b92924816a15d4869e63ccf991e3/transformed/jetified-viewbinding-7.0.4/AndroidManifest.xml" />
-      <root url="jar://$USER_HOME$/Pictures/Android/caches/transforms-3/8f91b92924816a15d4869e63ccf991e3/transformed/jetified-viewbinding-7.0.4/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/Pictures/Android/caches/transforms-3/dd329f1cfa028ee3b6348f6dda81d5ad/transformed/jetified-viewbinding-7.0.4/res" />
+      <root url="file://$USER_HOME$/Pictures/Android/caches/transforms-3/ee2df08ebe65c89db87b104c3301c550/transformed/jetified-viewbinding-7.0.4/res" />
+      <root url="file://$USER_HOME$/Pictures/Android/caches/transforms-3/dd329f1cfa028ee3b6348f6dda81d5ad/transformed/jetified-viewbinding-7.0.4/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/Pictures/Android/caches/transforms-3/dd329f1cfa028ee3b6348f6dda81d5ad/transformed/jetified-viewbinding-7.0.4/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

@@ -129,14 +129,14 @@ class FeedReaderDbHelper(context: Context) :
 
     companion object {
         private const val DATABASE_VERSION = 1
-        private const val DATABASE_NAME = "imagedb"
+        private const val DATABASE_NAME = "Imagedb"
 
-        private const val TABLE_SEARCH_IMAGE = "search_images"
-        private const val SEARCH_ID = "search_id"
-        private const val SEARCH_IMAGE = "image"
+        private const val TABLE_SEARCH_IMAGE = "Image_search"
+        private const val SEARCH_ID = "ID_search"
+        private const val SEARCH_IMAGE = "Image"
 
-        private const val TABLE_RESULTS = "saved_results"
-        private const val RESULT_ID = "result_id"
-        private const val RESULT_URL = "result_url"
+        private const val TABLE_RESULTS = "Result_saved"
+        private const val RESULT_ID = "Result_ID"
+        private const val RESULT_URL = "Result_URL"
     }
 }

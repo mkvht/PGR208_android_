@@ -15,7 +15,7 @@ import com.example.pgr208_android_eksamen.models.ImageModel
 
 class ListAdapter(private val savedImages: List<ImageModel>): RecyclerView.Adapter<ListAdapter.ViewHolder>() {
     class ViewHolder(val view: View) : RecyclerView.ViewHolder(view) {
-        val imageView: ImageView = view.findViewById(R.id.resultItemThumbnail)
+        val imageView: ImageView = view.findViewById(R.id.itemResult)
     }
 
     override fun onCreateViewHolder(viewGroup: ViewGroup, viewType: Int): ViewHolder {

@@ -11,9 +11,8 @@ import com.example.pgr208_android_eksamen.R
 import com.example.pgr208_android_eksamen.adapters.ListAdapter
 import com.example.pgr208_android_eksamen.databinding.FragmentAlbumBinding
 
-class ListFragment: Fragment(R.layout.fragment_album) {
+class ListFragment: Fragment(R.layout.fragment_album){
 
-    //private lateinit var binding: FragmentListSavedResultsBinding
     private lateinit var binding: FragmentAlbumBinding
 
     override fun onCreateView(
@@ -22,7 +21,6 @@ class ListFragment: Fragment(R.layout.fragment_album) {
         savedInstanceState: Bundle?
     ): View {
         binding = FragmentAlbumBinding.inflate(inflater, container, false)
-        //binding = FragmentListSavedResultsBinding.inflate(inflater, container, false)
         val view = binding.root
 
         val database = (activity as MainActivity).database

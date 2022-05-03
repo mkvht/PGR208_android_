@@ -25,9 +25,9 @@ class RISFragment : Fragment(R.layout.fragment_reverse_image_search) {
 
     private lateinit var binding: FragmentReverseImageSearchBinding
     private lateinit var imageUri: Uri
-    private var bingResponse = listOf<ImageApiResponse>()
-    private var tineyeResponse = listOf<ImageApiResponse>()
-    private var googleResponse = listOf<ImageApiResponse>()
+    private var bingResults = listOf<ImageApiResponse>()
+    private var tineyeResults = listOf<ImageApiResponse>()
+    private var googleResults = listOf<ImageApiResponse>()
     private val args by navArgs<RISFragmentArgs>()
 
     override fun onCreateView(
@@ -42,33 +42,32 @@ class RISFragment : Fragment(R.layout.fragment_reverse_image_search) {
         val rv = binding.imagesContainer
         rv.layoutManager = GridLayoutManager(activity, 2)
 
-        uploadImage()
+        uploadingImage()
 
         binding.uploadImage.setImageURI(imageUri)
 
         binding.bingBtn.setOnClickListener {
-            //Show bing results
-            rv.adapter = ImageAdapter(bingResponse)
-
+            //Bing results
+            rv.adapter = ImageAdapter(bingResults)
         }
 
         binding.googleBtn.setOnClickListener {
-            //Show google results
-            rv.adapter = ImageAdapter(googleResponse)
+            //Google results
+            rv.adapter = ImageAdapter(googleResults)
         }
 
         binding.tineyeBtn.setOnClickListener {
-            //Show tineye results
-            rv.adapter = ImageAdapter(tineyeResponse)
+            //Tineye results
+            rv.adapter = ImageAdapter(tineyeResults)
 
         }
 
-        binding.btnSave.setOnClickListener {
+        binding.saveBtn.setOnClickListener {
             val database = (activity as MainActivity).database
             val bitmap = BitmapUtility.uriToBitmap(requireContext(), null, imageUri.toString())
-            val byteArray = BitmapUtility.bitmapToByteArray(bitmap)
+            val byteArray = BitmapUtility.bitmapArray(bitmap)
             val imageId = database.insertImageSearch(ImageModel(image = byteArray))
-            bingResponse.forEach {
+            bingResults.forEach {
                 database.insertImageResult(ResultModel(url = it.imageLink, searchId = imageId))
             }
         }
@@ -76,62 +75,59 @@ class RISFragment : Fragment(R.layout.fragment_reverse_image_search) {
         return view
     }
 
-    private fun uploadImage() {
+    private fun uploadingImage() {
         val context = activity?.applicationContext
 
-        //Error message when there are no matching images from the endpoint
-        val noMatchingImages = { endpoint: String ->
-            Toast.makeText(context, "No matching images returned from $endpoint. Try a different image", Toast.LENGTH_LONG).show()
-        }
-
-        //Error message when a reverse search throws an error
-        val errorReverseSearch = { endpoint: String ->
-            Toast.makeText(context, "There was an error performing reverse search on $endpoint", Toast.LENGTH_LONG).show()
-        }
-
-        //Message for when the servers respond with resulting images
-        val finishedFetching = { endpoint: String ->
-            Toast.makeText(
-                context,
-                "Results returned from $endpoint. Click the corresponding button to see the result",
-                Toast.LENGTH_LONG
+        //Servers respond with resulting images
+        val finishedFetchingResults = { endpoint: String ->
+            Toast.makeText(context, "Finished processing $endpoint. Please click the buttons above to view results", Toast.LENGTH_LONG
             ).show()
         }
 
-        val onSuccessUpload = { url: String ->
-            Toast.makeText(
-                context,
-                "Image successfully uploaded to server. Performing reverse search. This might take a while...",
-                Toast.LENGTH_LONG
+        //Error: a reverse search has a fault
+        val preformingReverseSearchError = { endpoint: String ->
+            Toast.makeText(context, "A problem has occurred while preforming reverse search on $endpoint", Toast.LENGTH_LONG
             ).show()
+        }
 
-            ApiController.reverseSearch(ApiController.Endpoint.PROVIDER_BING, url) {
+        //Error: no matching images from the endpoint
+        val noSimilarImagesFound = { endpoint: String ->
+            Toast.makeText(context, "Could not find any matching images from $endpoint. Please try a another image", Toast.LENGTH_LONG
+            ).show()
+        }
+
+        val uploadedToServer = { url: String ->
+            Toast.makeText(context, "The image has been successfully uploaded to the server. One moment please...", Toast.LENGTH_LONG
+                ).show()
+
+
+                ApiController.reverseSearch(ApiController.Endpoint.PROVIDER_BING, url) {
                     result, error ->
                 result?.let{
-                    if (result.isEmpty()) noMatchingImages("Bing")
-                    finishedFetching("Bing")
-                    bingResponse = result
+                    if (result.isEmpty()) noSimilarImagesFound("Bing")
+                    finishedFetchingResults("Bing")
+                    bingResults = result
                 }
-                error?.let{ errorReverseSearch("Bing") }
+                error?.let{ preformingReverseSearchError("Bing") }
             }
 
             ApiController.reverseSearch(ApiController.Endpoint.PROVIDER_GOOGLE, url){
                     result, error ->
                 result?.let {
-                    if (result.isEmpty()) noMatchingImages("Google")
-                    finishedFetching("Google")
-                    googleResponse = result
+                    if (result.isEmpty()) noSimilarImagesFound("Google")
+                    finishedFetchingResults("Google")
+                    googleResults = result
                 }
-                error?.let{ errorReverseSearch("Google") }
+                error?.let{ preformingReverseSearchError("Google") }
             }
 
             ApiController.reverseSearch(ApiController.Endpoint.PROVIDER_TINEYE, url){
                     result, error ->
                 result?.let {
-                    if (result.isEmpty()) noMatchingImages("Tineye")
-                    tineyeResponse = result
+                    if (result.isEmpty()) noSimilarImagesFound("Tineye")
+                    tineyeResults = result
                 }
-                error?.let{ errorReverseSearch("Tineye") }
+                error?.let{ preformingReverseSearchError("Tineye") }
             }
         }
 
@@ -139,12 +135,9 @@ class RISFragment : Fragment(R.layout.fragment_reverse_image_search) {
             ApiController.uploadImage(
                 it.toFile()
             ) { uploadUrl, error ->
-                uploadUrl?.let { onSuccessUpload(uploadUrl) }
+                uploadUrl?.let { uploadedToServer(uploadUrl) }
                 error?.let {
-                    Toast.makeText(
-                        context,
-                        "There was an error uploading the image to the server...",
-                        Toast.LENGTH_LONG
+                    Toast.makeText(context, "Error uploading the image..", Toast.LENGTH_LONG
                     ).show()
                 }
 
