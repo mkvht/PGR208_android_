@@ -20,11 +20,9 @@ import com.example.pgr208_android_eksamen.models.ImageModel
 
 class SavedResultFragment() :
     Fragment(R.layout.fragment_view_results) {
-//    private lateinit var binding: FragmentViewSavedResultBinding
     private lateinit var binding: FragmentViewResultsBinding
-
     private val args: SavedResultFragmentArgs by navArgs()
-//    private val args: ViewSavedResultFragmentArgs by navArgs()
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -33,17 +31,17 @@ class SavedResultFragment() :
         val savedImage: ImageModel = args.savedImages
         val database = (activity as MainActivity).database
         binding = FragmentViewResultsBinding.inflate(inflater, container, false)
+
         val byteArray = savedImage.image
         val bitmap = BitmapFactory.decodeByteArray(byteArray, 0, byteArray.size)
         binding.savedImage.setImageBitmap(bitmap)
 
-        //Get the URL's for the saved image and convert it to ImageApiResponses that the gallery can preview
         val results = savedImage.id?.let { database.getResultsForSavedImage(it) }
         val mappedResults = results?.map { ImageApiResponse(it.url, it.url) }?.toList()
 
-        val galleryRv = binding.imagesContainer
-        galleryRv.layoutManager = GridLayoutManager(activity, 2)
-        galleryRv.adapter = mappedResults?.let { ImageAdapter(it) }
+        val savedRv = binding.imagesContainer
+        savedRv.layoutManager = GridLayoutManager(activity, 2)
+        savedRv.adapter = mappedResults?.let { ImageAdapter(it) }
 
         binding.deleteImageBtn.setOnClickListener {
             val action = SavedResultFragmentDirections.actionSavedResultFragmentToListFragment()
