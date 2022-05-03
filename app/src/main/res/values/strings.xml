@@ -3,6 +3,6 @@
     <string name="reverse_image_search_results">Reverse Image</string>
     <string name="upload_img">Upload</string>
     <string name="img_description">my image description</string>
-    <string name="saved_results">Saved results</string>
-    <string name="saved_image_description">A saved image</string>
+    <string name="saved_results">Results Saved</string>
+    <string name="saved_image">Image Saved</string>
 </resources>

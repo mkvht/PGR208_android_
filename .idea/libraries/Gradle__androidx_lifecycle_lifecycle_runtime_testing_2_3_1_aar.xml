@@ -7,8 +7,10 @@
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/571965fb187e5f58dd0a7eca7f9f266f/transformed/jetified-lifecycle-runtime-testing-2.3.1/jars/classes.jar!/" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-3/571965fb187e5f58dd0a7eca7f9f266f/transformed/jetified-lifecycle-runtime-testing-2.3.1/AndroidManifest.xml" />
       <root url="file://$USER_HOME$/Pictures/Android/caches/transforms-3/571965fb187e5f58dd0a7eca7f9f266f/transformed/jetified-lifecycle-runtime-testing-2.3.1/res" />
-      <root url="jar://$USER_HOME$/Pictures/Android/caches/transforms-3/401578649f7baa35128fef61b5b013f1/transformed/jetified-lifecycle-runtime-testing-2.3.1/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/Pictures/Android/caches/transforms-3/401578649f7baa35128fef61b5b013f1/transformed/jetified-lifecycle-runtime-testing-2.3.1/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/Pictures/Android/caches/transforms-3/7f1aa39e9c53e4309505f8945927ea63/transformed/jetified-lifecycle-runtime-testing-2.3.1/res" />
+      <root url="file://$USER_HOME$/Pictures/Android/caches/transforms-3/daffc6232d5225658ae38282d5ae4b3b/transformed/jetified-lifecycle-runtime-testing-2.3.1/res" />
+      <root url="jar://$USER_HOME$/Pictures/Android/caches/transforms-3/7f1aa39e9c53e4309505f8945927ea63/transformed/jetified-lifecycle-runtime-testing-2.3.1/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/Pictures/Android/caches/transforms-3/7f1aa39e9c53e4309505f8945927ea63/transformed/jetified-lifecycle-runtime-testing-2.3.1/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

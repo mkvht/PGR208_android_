@@ -7,13 +7,14 @@
       <root url="file://$USER_HOME$/.gradle/caches/transforms-3/78c461c35254e9c35b8034e292b58c23/transformed/jetified-lifecycle-viewmodel-savedstate-2.3.1/AndroidManifest.xml" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-3/78c461c35254e9c35b8034e292b58c23/transformed/jetified-lifecycle-viewmodel-savedstate-2.3.1/res" />
       <root url="file://$USER_HOME$/Pictures/Android/caches/transforms-3/78c461c35254e9c35b8034e292b58c23/transformed/jetified-lifecycle-viewmodel-savedstate-2.3.1/res" />
-      <root url="file://$USER_HOME$/Pictures/Android/caches/transforms-3/bfb18c8bdf6ee60d45c3977e5a3dda68/transformed/jetified-lifecycle-viewmodel-savedstate-2.3.1/AndroidManifest.xml" />
-      <root url="jar://$USER_HOME$/Pictures/Android/caches/transforms-3/bfb18c8bdf6ee60d45c3977e5a3dda68/transformed/jetified-lifecycle-viewmodel-savedstate-2.3.1/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/Pictures/Android/caches/transforms-3/c04a8a5d75c1991d9f2fa6b6e1a45c68/transformed/jetified-lifecycle-viewmodel-savedstate-2.3.1/res" />
+      <root url="file://$USER_HOME$/Pictures/Android/caches/transforms-3/e8f5e1eea26288721b9e6df9d51a76da/transformed/jetified-lifecycle-viewmodel-savedstate-2.3.1/res" />
+      <root url="jar://$USER_HOME$/Pictures/Android/caches/transforms-3/c04a8a5d75c1991d9f2fa6b6e1a45c68/transformed/jetified-lifecycle-viewmodel-savedstate-2.3.1/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/Pictures/Android/caches/transforms-3/c04a8a5d75c1991d9f2fa6b6e1a45c68/transformed/jetified-lifecycle-viewmodel-savedstate-2.3.1/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
       <root url="jar://$USER_HOME$/Pictures/Android/caches/modules-2/files-2.1/androidx.lifecycle/lifecycle-viewmodel-savedstate/2.3.1/411f92301435123d502de27b6f3262c062f3bd7a/lifecycle-viewmodel-savedstate-2.3.1-sources.jar!/" />
-      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/androidx.lifecycle/lifecycle-viewmodel-savedstate/2.3.1/411f92301435123d502de27b6f3262c062f3bd7a/lifecycle-viewmodel-savedstate-2.3.1-sources.jar!/" />
     </SOURCES>
   </library>
 </component>
