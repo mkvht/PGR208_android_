@@ -67,7 +67,7 @@
         android:layout_weight="@dimen/standard_weight"/>
 
     <Button
-        android:id="@+id/btnSave"
+        android:id="@+id/saveBtn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Save"

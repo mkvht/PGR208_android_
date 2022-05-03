@@ -7,11 +7,13 @@
       <root url="file://$USER_HOME$/.gradle/caches/transforms-3/667cbfb40bcfd9edf88b1daf172aa8f6/transformed/jetified-picasso-2.71828/res" />
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/667cbfb40bcfd9edf88b1daf172aa8f6/transformed/jetified-picasso-2.71828/jars/classes.jar!/" />
       <root url="file://$USER_HOME$/Pictures/Android/caches/transforms-3/0dffe2cb9a3fac4c666d25bc996aa6d8/transformed/jetified-picasso-2.71828/res" />
-      <root url="jar://$USER_HOME$/Pictures/Android/caches/transforms-3/4cefc36a234434ae2000af265555ef10/transformed/jetified-picasso-2.71828/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/Pictures/Android/caches/transforms-3/4cefc36a234434ae2000af265555ef10/transformed/jetified-picasso-2.71828/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/Pictures/Android/caches/transforms-3/a693d4a7027a548641462329fa5dfd4f/transformed/jetified-picasso-2.71828/res" />
+      <root url="file://$USER_HOME$/Pictures/Android/caches/transforms-3/1d376c6703aaf03516bbfc5f191337be/transformed/jetified-picasso-2.71828/res" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-3/fbf8b51d4c0fcc0465436805aee6b7b4/transformed/jetified-picasso-2.71828/res" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-3/fbf8b51d4c0fcc0465436805aee6b7b4/transformed/jetified-picasso-2.71828/AndroidManifest.xml" />
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/fbf8b51d4c0fcc0465436805aee6b7b4/transformed/jetified-picasso-2.71828/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/Pictures/Android/caches/transforms-3/a693d4a7027a548641462329fa5dfd4f/transformed/jetified-picasso-2.71828/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/Pictures/Android/caches/transforms-3/a693d4a7027a548641462329fa5dfd4f/transformed/jetified-picasso-2.71828/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.squareup.picasso/picasso/2.71828/2843564e6bac90b1e125104d7c842c87a96a8ee9/picasso-2.71828-javadoc.jar!/" />

@@ -14,7 +14,7 @@ object BitmapUtility {
         return decoder(context, id, uri)
     }
 
-    fun bitmapToByteArray(bitmap : Bitmap) : ByteArray{
+    fun bitmapArray(bitmap : Bitmap) : ByteArray{
         val outputStream = ByteArrayOutputStream()
 
         bitmap.compress(Bitmap.CompressFormat.PNG, 0, outputStream)
@@ -22,12 +22,13 @@ object BitmapUtility {
     }
 
     //FROM https://stackoverflow.com/questions/7769806/convert-bitmap-to-file
-    fun bitmapToFile(bitmap : Bitmap, filename : String, context: Context) : File {
+    fun bitmapFile(bitmap : Bitmap, filename : String, context: Context) : File {
+
+
+        val bitmapdata = bitmapArray(bitmap)
 
         val file = File(context.cacheDir, filename)
         file.createNewFile()
-
-        val bitmapdata = bitmapToByteArray(bitmap)
 
         val fileOutputStream = FileOutputStream(file)
         fileOutputStream.write(bitmapdata)

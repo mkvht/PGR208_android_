@@ -62,10 +62,10 @@ class RISFragment : Fragment(R.layout.fragment_reverse_image_search) {
 
         }
 
-        binding.btnSave.setOnClickListener {
+        binding.saveBtn.setOnClickListener {
             val database = (activity as MainActivity).database
             val bitmap = BitmapUtility.uriToBitmap(requireContext(), null, imageUri.toString())
-            val byteArray = BitmapUtility.bitmapToByteArray(bitmap)
+            val byteArray = BitmapUtility.bitmapArray(bitmap)
             val imageId = database.insertImageSearch(ImageModel(image = byteArray))
             bingResults.forEach {
                 database.insertImageResult(ResultModel(url = it.imageLink, searchId = imageId))
@@ -137,7 +137,7 @@ class RISFragment : Fragment(R.layout.fragment_reverse_image_search) {
             ) { uploadUrl, error ->
                 uploadUrl?.let { uploadedToServer(uploadUrl) }
                 error?.let {
-                    Toast.makeText(context, "There was an error uploading the image to the server...", Toast.LENGTH_LONG
+                    Toast.makeText(context, "Error uploading the image..", Toast.LENGTH_LONG
                     ).show()
                 }
 
