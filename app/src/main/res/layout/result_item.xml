@@ -6,7 +6,7 @@
     android:layout_gravity="center">
 
     <ImageView
-        android:id="@+id/resultItemThumbnail"
+        android:id="@+id/itemResult"
         android:layout_width="280dp"
         android:layout_height="280dp"
         android:elevation="6dp"
@@ -14,7 +14,7 @@
         android:layout_gravity="center"
         android:scaleType="centerInside"
         android:adjustViewBounds="true"
-        android:contentDescription="@string/saved_image_description"
+        android:contentDescription="@string/saved_image"
         android:padding="5dp"
         />
 

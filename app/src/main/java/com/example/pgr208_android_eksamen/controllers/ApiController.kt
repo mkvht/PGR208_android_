@@ -53,11 +53,11 @@ object ApiController {
     fun uploadImage(png: File, callback: ((uploadUrl: String?, error: ANError?) -> Unit)? = null) {
         when(png.extension){
             "png" ->{
-                Log.d(TAG, "Attempting upload of file ${png.name} to $serverUrl/upload")
+                Log.d(TAG, "Search file ${png.name} to $serverUrl/upload")
                 AndroidNetworking.upload("$serverUrl/upload")
                     .addMultipartFile("image", png)
                     .addHeaders("Content-Type", "image/png")
-                    .setTag("uploadTest")
+                    .setTag("testSearch")
                     .setPriority(Priority.HIGH)
                     .build()
                     .getAsString(object : StringRequestListener {

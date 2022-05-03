@@ -2,15 +2,15 @@
   <library name="Gradle: androidx.activity:activity:1.3.1@aar">
     <ANNOTATIONS>
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/38bd513dd8b1bd3e72af45038d30d87c/transformed/jetified-activity-1.3.1/annotations.zip!/" />
-      <root url="jar://$USER_HOME$/Pictures/Android/caches/transforms-3/21ab6c12663f6b154ddedaaf30766962/transformed/jetified-activity-1.3.1/annotations.zip!/" />
+      <root url="jar://$USER_HOME$/Pictures/Android/caches/transforms-3/8162361a5e6addc547d357d7d3ab8daf/transformed/jetified-activity-1.3.1/annotations.zip!/" />
     </ANNOTATIONS>
     <CLASSES>
       <root url="file://$USER_HOME$/.gradle/caches/transforms-3/38bd513dd8b1bd3e72af45038d30d87c/transformed/jetified-activity-1.3.1/AndroidManifest.xml" />
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/38bd513dd8b1bd3e72af45038d30d87c/transformed/jetified-activity-1.3.1/jars/classes.jar!/" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-3/38bd513dd8b1bd3e72af45038d30d87c/transformed/jetified-activity-1.3.1/res" />
-      <root url="file://$USER_HOME$/Pictures/Android/caches/transforms-3/21ab6c12663f6b154ddedaaf30766962/transformed/jetified-activity-1.3.1/AndroidManifest.xml" />
-      <root url="jar://$USER_HOME$/Pictures/Android/caches/transforms-3/21ab6c12663f6b154ddedaaf30766962/transformed/jetified-activity-1.3.1/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/Pictures/Android/caches/transforms-3/21ab6c12663f6b154ddedaaf30766962/transformed/jetified-activity-1.3.1/res" />
+      <root url="file://$USER_HOME$/Pictures/Android/caches/transforms-3/8162361a5e6addc547d357d7d3ab8daf/transformed/jetified-activity-1.3.1/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/Pictures/Android/caches/transforms-3/8162361a5e6addc547d357d7d3ab8daf/transformed/jetified-activity-1.3.1/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/Pictures/Android/caches/transforms-3/8162361a5e6addc547d357d7d3ab8daf/transformed/jetified-activity-1.3.1/res" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
