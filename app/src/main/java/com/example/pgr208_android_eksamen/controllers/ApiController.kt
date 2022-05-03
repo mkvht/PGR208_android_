@@ -11,6 +11,7 @@ import com.androidnetworking.interfaces.StringRequestListener
 import com.example.pgr208_android_eksamen.models.ImageApiResponse
 import org.json.JSONArray
 import java.io.File
+import java.util.*
 
 object ApiController {
     private val TAG = "ApiController"

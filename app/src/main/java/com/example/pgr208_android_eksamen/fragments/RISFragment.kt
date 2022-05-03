@@ -76,9 +76,6 @@ class RISFragment : Fragment(R.layout.fragment_reverse_image_search) {
         return view
     }
 
-    /**
-     * Method that automatically uploads an image to the server and attempts to fetch results
-     */
     private fun uploadImage() {
         val context = activity?.applicationContext
 

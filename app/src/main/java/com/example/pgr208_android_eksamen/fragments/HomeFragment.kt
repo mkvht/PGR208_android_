@@ -6,13 +6,13 @@ import android.content.Intent
 import android.content.pm.PackageManager
 import android.net.Uri
 import android.os.Bundle
+import android.os.Environment
 import android.provider.MediaStore
 import android.provider.Settings
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
 import android.widget.Toast
 import androidx.activity.result.ActivityResultLauncher
 import androidx.activity.result.contract.ActivityResultContracts
@@ -20,6 +20,7 @@ import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
+import androidx.core.content.FileProvider
 import androidx.core.net.toUri
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
@@ -30,23 +31,25 @@ import com.example.pgr208_android_eksamen.utilities.BitmapUtility
 import com.example.pgr208_android_eksamen.utilities.BitmapUtility.uriToBitmap
 import com.theartofdev.edmodo.cropper.CropImage
 import com.theartofdev.edmodo.cropper.CropImageView
+import kotlinx.android.synthetic.main.fragment_home.*
+import java.io.File
+import java.io.IOException
+import java.text.SimpleDateFormat
+
+import java.util.*
 
 class HomeFragment : Fragment(R.layout.fragment_home) {
-
-    companion object {
-        private const val  CAMERA_PERMISSION_CODE = 1
-        private const val CAMERA_REQUEST_CODE = 2
-
-
-    }
+    var vFilename: String = ""
 
     private lateinit var binding: FragmentHomeBinding
     private var imageUri : Uri? = null
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
+
 
         binding = FragmentHomeBinding.inflate(inflater, container, false)
         val view = binding.root
@@ -72,11 +75,15 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
     }
 
     private fun selectImageAndUpload() {
-        when { ContextCompat.checkSelfPermission(activity as MainActivity, Manifest.permission.READ_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED -> {
+        when { ContextCompat.checkSelfPermission(
+            activity as MainActivity,
+            Manifest.permission.READ_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED -> {
             val intent = Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI)
             galleryLauncher.launch(intent)
         }
-            ActivityCompat.shouldShowRequestPermissionRationale(activity as MainActivity, Manifest.permission.READ_EXTERNAL_STORAGE) -> {
+            ActivityCompat.shouldShowRequestPermissionRationale(
+                activity as MainActivity,
+                Manifest.permission.READ_EXTERNAL_STORAGE) -> {
                 showPermissionDeniedDialog()
             }
             else -> {
@@ -84,19 +91,50 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
             }
         }
     }
+    lateinit var currentPhotoPath: String
+    private fun createImageFile():File{
+        val timeStamp: String = SimpleDateFormat("yyyyMMdd_HHmmss").format(Date())
+        val storageDir: File? = activity?.getExternalFilesDir(Environment.DIRECTORY_PICTURES)
+        return File.createTempFile(
+            "JPEG_${timeStamp}_", /* prefix */
+            ".jpg", /* suffix */
+            storageDir /* directory */
+        ).apply {
+            // Save a file: path for use with ACTION_VIEW intents
+            currentPhotoPath = absolutePath
+        }
+    }
 
     private fun selectCameraAndUpload() {
 
         when { ContextCompat.checkSelfPermission(activity as MainActivity,
             Manifest.permission.CAMERA) == PackageManager.PERMISSION_GRANTED -> {
-            val intent = Intent(MediaStore.ACTION_IMAGE_CAPTURE)
-            cameraLauncher.launch(intent)
+            //https://gist.github.com/dyazincahya/8eb2c63afda9d049944ba2257e3edad7
+            val packageManager: PackageManager = (activity as MainActivity).packageManager
+            //Set Intent
+            val intent = Intent(MediaStore.ACTION_IMAGE_CAPTURE).also { intent ->
+                intent.resolveActivity(packageManager)?.also {
+                    val photoFile: File? = try {
+                        createImageFile()
+                    }catch (ex: IOException){
+                        null
+                    }
+                    photoFile?.also {
+                        val photoURI: Uri = FileProvider.getUriForFile(
+                            activity as MainActivity,
+                            "com.example.prg208_android_eksamen",
+                            it)
+                        intent.putExtra(MediaStore.EXTRA_OUTPUT,photoURI)
+                        cameraLauncher.launch(intent)
+                    }
+                }
+            }
         }
             ActivityCompat.shouldShowRequestPermissionRationale(activity as MainActivity, Manifest.permission.CAMERA) -> {
                 showPermissionDeniedDialog()
             }
             else -> {
-                requestPermissionLauncher.launch(Manifest.permission.READ_EXTERNAL_STORAGE)
+                requestPermissionLauncher.launch(Manifest.permission.CAMERA)
             }
         }
 
@@ -140,6 +178,9 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
         registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
             if (result.resultCode == AppCompatActivity.RESULT_OK && result.data != null) {
                 imageUri = result.data?.data
+                Log.d("YOO!", "$imageUri")
+                Log.d("YO!", "${result.data}")
+                Log.d("YOOO!", "${result.data?.data}")
 
                 imageUri?.let {uri -> launchImageCrop(uri)
                     Log.d("GalleryPicker", "URI: $imageUri")
@@ -148,17 +189,22 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
         }
 
 
-    private val cameraLauncher : ActivityResultLauncher<Intent> =
+    private val cameraLauncher :
+            ActivityResultLauncher<Intent> =
         registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
-            if (result.resultCode == AppCompatActivity.RESULT_OK && result.data != null) {
+            if (result.resultCode == AppCompatActivity.RESULT_OK) {
+                Log.d("YO", "${result.resultCode}" + "${Activity.RESULT_OK}")
                 imageUri = result.data?.data
+                Log.d("YOOO", "$imageUri")
+                Log.d("YOOO", "${result.data}")
+                Log.d("YOOO", "${result.data?.data}")
+
 
                 imageUri?.let {uri -> launchImageCrop(uri)
                     Log.d("CameraPicker", "URI: $imageUri")
                 }
             }
         }
-
 
 
     //Crop-methods
