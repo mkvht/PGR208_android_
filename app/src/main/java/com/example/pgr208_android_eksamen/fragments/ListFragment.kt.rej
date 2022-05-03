@@ -1,0 +1,10 @@
+diff a/app/src/main/java/com/example/pgr208_android_eksamen/fragments/ListFragment.kt b/app/src/main/java/com/example/pgr208_android_eksamen/fragments/ListFragment.kt	(rejected hunks)
+@@ -11,7 +11,7 @@
+ import com.example.pgr208_android_eksamen.adapters.ListAdapter
+ import com.example.pgr208_android_eksamen.databinding.FragmentAlbumBinding
+ 
+-class ListFragment: Fragment(R.layout.fragment_album) {
++class ListFragment: Fragment(R.layout.fragment_album){
+ 
+     private lateinit var binding: FragmentAlbumBinding
+ 
