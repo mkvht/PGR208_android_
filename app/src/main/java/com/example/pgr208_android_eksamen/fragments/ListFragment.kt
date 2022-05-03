@@ -11,7 +11,7 @@ import com.example.pgr208_android_eksamen.R
 import com.example.pgr208_android_eksamen.adapters.ListAdapter
 import com.example.pgr208_android_eksamen.databinding.FragmentAlbumBinding
 
-class ListFragment: Fragment(R.layout.fragment_album) {
+class ListFragment: Fragment(R.layout.fragment_album){
 
     private lateinit var binding: FragmentAlbumBinding
 
