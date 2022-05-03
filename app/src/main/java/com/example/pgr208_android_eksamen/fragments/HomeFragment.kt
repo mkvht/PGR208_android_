@@ -55,6 +55,12 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
         binding = FragmentHomeBinding.inflate(inflater, container, false)
         val view = binding.root
 
+        binding.uploadBtn.setOnClickListener{
+            ImageUpload()
+        }
+        binding.cameraBtn.setOnClickListener{
+            CameraUpload()
+        }
         binding.searchBtn.setOnClickListener{
             imageUri?.let {
                 Toast.makeText(this.context, "Searching for image", Toast.LENGTH_LONG).show()
@@ -64,14 +70,8 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
                 Toast.makeText(this.context, "You must upload or use the camera to get an image to search for first!", Toast.LENGTH_SHORT).show()
             }
 
-            binding.uploadBtn.setOnClickListener{
-                ImageUpload()
-            }
-
-            binding.cameraBtn.setOnClickListener{
-                CameraUpload()
-            }
         }
+
         return view
 
 
